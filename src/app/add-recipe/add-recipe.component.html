@@ -1,0 +1,52 @@
+<div class="container addRecipeClass">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-8 mx-auto">
+      <div class="card card-signin my-5">
+        <h5 class="card-header">SA Kitchen</h5>
+        <div class="card-body">
+          <form class="" [formGroup]="recipeForm" (ngSubmit)="onFormSubmit()">
+            <div class="form-group row">
+              <label for="name" class="col-sm-2 col-form-label">Name</label>
+              <div class="col-sm-10">
+                <input type="text" formControlName="name" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="imageURL" class="col-sm-2 col-form-label">Image URL</label>
+              <div class="col-sm-10">
+                <input type="text" formControlName="imageUrl" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="imageURL" class="col-sm-2 col-form-label">Description</label>
+              <div class="col-sm-10">
+                <input type="text" formControlName="description" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="imageURL" class="col-sm-2 col-form-label">Type</label>
+              <div class="col-sm-10">
+                <div class="form-check form-check-inline">
+                  <input type="radio" class="form-check-input" id="radio1" formControlName="type" value="Veg">Veg &nbsp;
+                <input type="radio" class="form-check-input" id="radio2" formControlName="type" value="Non-Veg">Non-Veg
+                </div>
+                <!-- <input type="radio" class="form-check-input" id="radio1" formControlName="type" value="Veg">Veg
+                <input type="radio" class="form-check-input" id="radio2" formControlName="type" value="Non-Veg">Non-Veg -->
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="imageURL" class="col-sm-2 col-form-label">Chef</label>
+              <div class="col-sm-10">
+                <input type="text" formControlName="chef" class="form-control" />
+              </div>
+            </div>
+            <div class="text-center">
+              <button class="btn btn-primary mr-1">Add Recipe</button>
+              <button class="btn btn-secondary" type="reset">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

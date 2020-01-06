@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'recipe';
+  title = 'SA Kitchen';
+
+  data;
+  displayRecipe(event: any) {
+    this.data = event;
+    // console.log(this.data);
+  }
 }
