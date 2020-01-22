@@ -1,11 +1,32 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center;font-family: 'Reem Kufi', sans-serif;" class="mt-2">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>
-<app-add-recipe (valueChange)='displayRecipe($event)'></app-add-recipe>
+<nav id="navbar" class="push better-nav fixed-top">
+  <div class="container">
+    <div class="head">
+      <a routerLink="/" class="brand">
+        <div class="title">
+          <h3>Sudo ng</h3>
+        </div>
+      </a>
+    </div>
+    <div class="body">
+      <ul>
+        <li class="home"><a  routerLink="/home" >Home</a></li>
+        <li class="home"><a routerLink="/add-new-recipe">Add Recipe</a></li>
+        <li class="page"><a routerLink="/recipes">Recipes</a></li>
+        <li class="home" *ngIf="authService.isAuthenticated();"><a (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+    <div class="toggle">
+      <a href="#navbar-slide">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</nav>
+<div id="underlay" class="better-nav-mobile-underlay"></div>
+<nav id="navbar-slide" class="better-nav-pills"></nav>
+<!-- <app-add-recipe (valueChange)='displayRecipe($event)'></app-add-recipe>
 
-<app-recipe-list-cell [recipe]="data"></app-recipe-list-cell>
+<app-recipe-list-cell [recipe]="data"></app-recipe-list-cell> -->
 
 <router-outlet></router-outlet>
